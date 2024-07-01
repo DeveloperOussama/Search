@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&family=Tilt+Warp&display=swap');
+* {
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Tilt Warp", sans-serif;
+}
+
+body {
+    background-color: #3498DB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search .inputText {
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 15px;
+    height: 15px;
+    width: 15px;
+    transition: width 1s ease;
+
+}
+
+.search .searchButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    border: none;
+    height: 33px;
+    width: 30px;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: -3px;
+    right: 0;
+    transition: transform 1s ease;
+
+}
+
+.search .searchButton:focus, .search .inputText:focus {
+    outline: none;
+}
+
+.search.active .inputText {
+    width: 200px;
+}
+
+.search.active .searchButton {
+    background-color: black;
+    color: whitesmoke;
+}
